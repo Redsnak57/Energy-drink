@@ -1,0 +1,163 @@
+:root{
+    --body-color : #263556;
+    --nav-bar-descicon: #a3b6e1;
+    --bouton-to-left : linear-gradient(to left, #7125fe, #9e11f5);
+    --border-button : #7125fe;
+    --text-blanc : #f1f1f1;
+    --trait : linear-gradient(to right, #665682, #263556);
+    --heading : #1d2842;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: #263556;  
+    overflow-x: hidden;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+/* nav */ 
+.navbar {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    margin-left: 40%;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.navbar ul li {
+    margin-right: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--nav-bar-descicon);
+    letter-spacing: 2px;
+    font-weight: 800px;
+    z-index: 10000;
+}
+
+.navbar ul li a:hover {
+    color: var(--text-blanc);
+}
+/* fin nav */ 
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-flow: column;
+    min-height: 15rem;
+    margin-top: 20vh;
+    background-color: var(--heading);  
+}
+
+.heading h3 {
+    font-size: 3rem;
+    color: var(--text-blanc);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.heading p {
+    font-size: 2rem;
+}
+
+.heading p a {
+    text-decoration: none;
+    color: var(--nav-bar-descicon);
+}
+
+.heading span {
+    color: var(--text-blanc);
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .image {
+    flex: 1 1 40rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+    color: var(--text-blanc);
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background:  var(--border-button);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-blanc);
+}
+
+/* div ok mais section non */  
+.steps .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 0 10px;
+} 
+
+.steps .title {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+
+.steps .box-container .box {
+    text-align: center;
+    border: white;
+    background: var(--heading);
+    padding: 2rem;
+}
+
+.steps .box-container .box img {
+    height: 10rem;
+    width: 100%;
+    object-fit: contain;
+}
