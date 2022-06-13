@@ -6,6 +6,7 @@
     --text-blanc : #f1f1f1;
     --trait : linear-gradient(to right, #665682, #263556);
     --heading : #1d2842;
+    --yellow : rgb(151, 151, 5);
 }
 
 * {
@@ -19,47 +20,6 @@ body {
     background: #263556;  
     overflow-x: hidden;
 }
-
-section {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-}
-
-/* nav */ 
-.navbar {
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-}
-
-.navbar ul {
-    display: flex;
-    margin-left: 40%;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
-.navbar ul li {
-    margin-right: 30px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: var(--nav-bar-descicon);
-    letter-spacing: 2px;
-    font-weight: 800px;
-    z-index: 10000;
-}
-
-.navbar ul li a:hover {
-    color: var(--text-blanc);
-}
-/* fin nav */ 
-
 .heading {
     display: flex;
     align-items: center;
@@ -67,7 +27,6 @@ section {
     gap: 1rem;
     flex-flow: column;
     min-height: 15rem;
-    margin-top: 20vh;
     background-color: var(--heading);  
 }
 
@@ -130,8 +89,7 @@ section {
     text-decoration: none;
     color: var(--text-blanc);
 }
-
-/* div ok mais section non */  
+  
 .steps .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -146,6 +104,10 @@ section {
     justify-content: center;
     align-items: center;
     font-size: 4rem;
+    color: var(--text-blanc);
+    margin-bottom: 1rem;
+    TEXT-DECORATION: underline;
+    text-underline-offset: 0.5rem;
 }
 
 
@@ -156,8 +118,88 @@ section {
     padding: 2rem;
 }
 
+.steps .box-container .box h3 {
+    color: var(--text-blanc);
+    margin: 1rem 0;
+}
+
+.steps .box-container .box p {
+    color: var(--nav-bar-descicon);
+}
+
 .steps .box-container .box img {
     height: 10rem;
     width: 100%;
     object-fit: contain;
 }
+
+/* review section */ 
+
+.reviews .slide {
+    border: 1px solid var(--border-button);
+    padding: 2rem;
+    text-align: center;
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.reviews .slide img {
+    width: 15%;
+    margin-bottom: 1rem;
+}
+
+.reviews .slide p {
+    padding: 1rem 0;
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--text-blanc);
+}
+
+.reviews .slide .stars {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    border: 1px solid var(--border-button);
+}
+
+.reviews .slide .stars i {
+    color: var(--yellow);
+}
+
+.reviews .slide h3 {
+    font-size: 2rem;
+    color: var(--nav-bar-descicon);
+}
+
+/* end review */ 
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

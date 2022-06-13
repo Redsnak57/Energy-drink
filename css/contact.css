@@ -1,0 +1,78 @@
+:root{
+    --body-color : #263556;
+    --nav-bar-descicon: #a3b6e1;
+    --bouton-to-left : linear-gradient(to left, #7125fe, #9e11f5);
+    --border-button : #7125fe;
+    --text-blanc : #f1f1f1;
+    --trait : linear-gradient(to right, #665682, #263556);
+    --heading : #1d2842;
+    --yellow : rgb(151, 151, 5);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: #263556;  
+    overflow-x: hidden;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-flow: column;
+    min-height: 15rem;
+    background-color: var(--heading);  
+    margin-bottom: 2rem;
+}
+
+.heading h3 {
+    font-size: 3rem;
+    color: var(--text-blanc);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.maps {
+    width: 100%;
+}
+
+.container-box {
+    width: 100%;
+}
+.contact .container-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+    gap: 1rem;
+    height: 50%;
+    margin: 0 10px;
+}
+
+.box {
+    background: var(--heading);
+    text-align: center;
+    padding: 2rem;
+}
+
+.box i {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.box p {
+    color: white;
+}
